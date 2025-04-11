@@ -29,4 +29,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/sturdystubs/aioegg:beta
+            ghcr.io/kiborgn/aioegg:beta
