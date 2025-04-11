@@ -31,6 +31,10 @@ function SteamCMD_Validate() {
         Delete_SteamApps_Directory
         Info "Downloading Aux2 Files - Validation On!"
         ./steamcmd/steamcmd.sh +force_install_dir /home/container +login anonymous +app_update 258550 -beta aux02 validate +quit
+    elif [[ "${FRAMEWORK}" == *"aux3"* ]]; then
+        Delete_SteamApps_Directory
+        Info "Downloading Aux3 Files - Validation On!"
+        ./steamcmd/steamcmd.sh +force_install_dir /home/container +login anonymous +app_update 258550 -beta aux03 validate +quit
     elif [[ "${FRAMEWORK}" == *"staging"* ]]; then
         Delete_SteamApps_Directory
         Info "Downloading Staging Files - Validation On!"
@@ -52,6 +56,9 @@ function SteamCMD_No_Validation() {
     elif [[ "${FRAMEWORK}" == *"aux2"* ]]; then
         Info "Downloading Aux2 Files - Validation Off!"
         ./steamcmd/steamcmd.sh +force_install_dir /home/container +login anonymous +app_update 258550 -beta aux02 +quit
+    elif [[ "${FRAMEWORK}" == *"aux3"* ]]; then
+        Info "Downloading Aux3 Files - Validation Off!"
+        ./steamcmd/steamcmd.sh +force_install_dir /home/container +login anonymous +app_update 258550 -beta aux03 +quit
     elif [[ "${FRAMEWORK}" == *"staging"* ]]; then
         Info "Downloading Staging Files - Validation Off!"
         ./steamcmd/steamcmd.sh +force_install_dir /home/container +login anonymous +app_update 258550 -beta staging +quit

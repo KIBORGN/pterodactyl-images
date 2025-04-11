@@ -34,4 +34,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/sturdystubs/games:${{ matrix.game }}
+            ghcr.io/KIBORGN/games:${{ matrix.game }}

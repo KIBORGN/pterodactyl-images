@@ -98,6 +98,21 @@ if [[ "$FRAMEWORK_UPDATE" == "1" ]]; then
 	    Check_Modding_Root_Folder
 	    Success "Done updating Carbon!"
 	    Doorstop_Startup_Carbon
+	elif [[ "${FRAMEWORK}" == "carbon-aux3" ]]; then
+	    # Carbon: https://github.com/CarbonCommunity/Carbon.Core
+	    Info "Updating Carbon Aux3..."
+	    curl -sSL "https://github.com/CarbonCommunity/Carbon/releases/download/rustbeta_aux03_build/Carbon.Linux.Debug.tar.gz" | tar zx
+	    Check_Modding_Root_Folder
+	    Success "Done updating Carbon!"
+	    Doorstop_Startup_Carbon
+
+	elif [[ "${FRAMEWORK}" == "carbon-aux3-minimal" ]]; then
+	    # Carbon: https://github.com/CarbonCommunity/Carbon.Core
+	    Info "Updating Carbon Aux3 Minimal..."
+	    curl -sSL "https://github.com/CarbonCommunity/Carbon/releases/download/rustbeta_aux03_build/Carbon.Linux.Minimal.tar.gz" | tar zx
+	    Check_Modding_Root_Folder
+	    Success "Done updating Carbon!"
+	    Doorstop_Startup_Carbon
 	fi
 else
 	Error "Skipping framework auto update! Did you mean to do this? If not set the Framework Update variable to true!"
